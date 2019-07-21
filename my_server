@@ -1,0 +1,58 @@
+    "paths"
+    -------
+
+[paths]
+default = https://WilbertMS@bitbucket.org/WilbertMS/colegio
+
+    Assigns symbolic names and behavior to repositories.
+
+    Options are symbolic names defining the URL or directory that is the
+    location of the repository. Example:
+
+      [paths]
+      my_server = https://WilbertMS@bitbucket.org/WilbertMS/colegio
+      local_path = /home/me/repo
+
+    These symbolic names can be used from the command line. To pull from
+    "my_server": 'hg pull my_server'. To push to "local_path": 'hg push
+    local_path'.
+
+    Options containing colons (":") denote sub-options that can influence
+    behavior for that specific path. Example:
+
+      [paths]
+      my_server:hg push https://WilbertMS@bitbucket.org/WilbertMS/colegio
+      my_server:pushurl = ssh://example.com/my_path
+
+    The following sub-options can be defined:
+
+    "pushurl"
+       The URL to use for push operations. If not defined, the location
+       defined by the path's main entry is used.
+
+    "pushrev"
+       A revset defining which revisions to push by default.
+
+       When 'hg push' is executed without a "-r" argument, the revset defined
+       by this sub-option is evaluated to determine what to push.
+
+       For example, a value of "." will push the working directory's revision
+       by default.
+
+       Revsets specifying bookmarks will not result in the bookmark being
+       pushed.
+
+    The following special named paths exist:
+
+    "default"
+       The URL or directory to use when no source or remote is specified.
+
+       'hg clone' will automatically define this path to the location the
+       repository was cloned from.
+
+    "default-push"
+       (deprecated) The URL or directory for the default 'hg push' location.
+       "default:pushurl" 
+[paths]
+default = https://WilbertMS@bitbucket.org/WilbertMS/colegio
+
