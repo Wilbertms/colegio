@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title%}Inicio{% endblock title%}</title>
+</head>
+<body>
+	{% block nav %}
+	{% endblock nav %}
+
+	{% block body %}
+	
+	<div class="container-fluid inicio-body">
+		<div class="row mr-auto ml-auto ">
+			<div class="ml-auto mr-auto ">
+				<h3 class="text-center mt-3 mb-5">Colegio David J. Granadino</h3>
+				<div class="mr-auto col-5 ml-auto">
+					<img src="{% static 'images/foto.jpg'%}" class="escudo">
+				</div>
+			</div>
+		</div>
+		<div class="row text-justify border mt-5 container ml-auto mr-auto">
+			<div class="col-12 col-md-3 border card m-auto p-0 d-none d-md-block mision">
+				<h4 class="text-center bg-primary card-header">Mision</h4>
+				<p class=" m-3 card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit saepe aliquid cumque, ullam molestiae molestias, voluptatibus adipisci neque pariatur nam, consectetur repellat sit accusamus rerum deleniti qui assumenda quae explicabo.</p>
+			</div>
+			<div class="col-12 col-md-4 border p-0 mision card">
+				<h5 class="text-center card-header bg-primary">Esto somos nosotros</h5>
+				<p class=" m-3 card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, voluptate facilis voluptatum voluptatem, tempore obcaecati a in. Ducimus voluptas saepe sit laudantium sunt similique earum velit natus iusto a! Repudiandae.</p>
+			</div>
+			<div class="m-5 d-md-none"></div>
+			<div class="col-12 col-md-3 border card m-auto p-0 d-md-none mision">
+				<h4 class="text-center bg-primary card-header">Mision</h4>
+				<p class=" m-3 card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit saepe aliquid cumque, ullam molestiae molestias, voluptatibus adipisci neque pariatur nam, consectetur repellat sit accusamus rerum deleniti qui assumenda quae explicabo.</p>
+			</div>
+			<div class="m-5 d-md-none"></div>
+			<div class="col-12 col-md-3 border m-auto p-0 mision card">
+				<h4 class="text-center bg-primary card-header">Vision</h4>
+				<p class=" m-3 card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. ffffffffffff Veritatis, voluptate facilis voluptatum voluptatem, tempore obcaecati a in. Ducimus voluptas saepe sit laudantium sunt similique earum velit natus iusto a! Repudiandae.</p>
+			</div>
+			<div class="m-5 d-md-none"></div>
+		</div>
+
+	</div>
+
+	{% endblock body %}
+
+	{% block pie %}
+	{% endblock pie %}
+
+</body>
+</html>

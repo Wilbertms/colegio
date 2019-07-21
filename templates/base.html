@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title%}Inicio{% endblock title%}</title>
+
+	{% block css%}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	{% endblock css%}
+	
+</head>
+<body>
+	{% block nav%}
+	<nav class = "navbar-nav nav bg-primary container-fluid col fixed-top">
+		<div class="row">
+			<div class="mt-0 logo-div p-0 mb-0 col-2">
+				<a class="ml-4 " href="{% url 'inicio' %}" >
+					<img class ="logo" src="{% static 'images/foto.jpg' %}">
+				</a>
+			</div>
+			<input type="button" id="x" value="menu" class="menu-icon btn col-2 ml-auto">
+			<div class="mt-auto mb-auto menu col-10 text-right">
+				<a class="col-sm-12 col-lg-1" href="">Notas</a>
+				<a class="col-sm-12 col-lg-1" href="">Horario</a>
+				<a class="col-sm-12 col-lg-1" href="">Pagos</a>
+				<a class="col-sm-12 col-lg-1" href="">Mensaje</a>
+				<a class="col-sm-12 col-lg-1" href="">Conducta</a>
+				<a class="col-sm-12 col-lg-1" href="">Asistencia</a>
+				<a class="col-sm-12 col-lg-1" href="">login</a>
+			</div>
+		</div>
+	</nav>
+	{% endblock nav%}
+
+	{% block body%}
+
+	{% endblock body%}
+
+	{% block pie%}
+	<nav class="fixed-bottom bg-primary pie">
+		<div class="mr-auto ml-auto">
+		<p class="m-0 text-center col-12">Colegio David J. Granadino</p>
+		<p class="m-0 text-center">2019</p>
+	</div>
+	</nav>
+	{% endblock pie%}
+
+	{% block script%}
+		<script src="{% static 'js/estilos.js' %}"></script>
+		<script src="{% static 'js/jquery.js' %}"></script>
+	{% endblock script%}
+</body>
+</html>

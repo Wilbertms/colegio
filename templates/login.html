@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Login{% endblock title %}</title>
+</head>
+<body>
+	{% block nav %}
+	{% endblock nav %}
+
+	{% block body %}
+	<div class="container-fluid bg-primary">
+		<div class="row">
+			<form method="POST" class="m-3 login ml-auto mr-auto border-left border-right m-3 p-3 mb-3 col-12 col-md-4">
+				<div class="imagen col-3 ml-auto mr-auto">
+					<img src="{% static 'images/login.png' %}" class="col-12 login-img">
+				</div>
+				<div class="campos mt-5">
+					<label for="username" class="col-12 text-white">Usuario:</label>
+					<input name="username" type="text" class="col-12 text-login" required="Ingresar Usuario">
+					<label for="password" class="col-12 text-white">Contraseña:</label>
+					<input name="password" type="text" class="col-12 text-login" required="Ingresar Contraseña">
+					<div class="col-7 mr-auto ml-auto"><input type="submmit" value="Ingresar" class="btn-success btn mt-5 mb-2 col-12"></div>
+				</div>
+			</form>
+		</div>
+	</div>			
+	{% endblock body %}
+
+	{% block pie %}
+	{% endblock pie %}
+</body>
+</html>
